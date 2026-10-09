@@ -1,10 +1,9 @@
-# Gagan & Khushbu — Engagement Invitation
+# Khushbu & Gagan — Engagement Invitation
 
 A minimalist, mobile-first animated invitation website. Plain HTML, CSS and JavaScript (ES modules).
 No backend, no database, no API keys, no build step, no paid services.
 
 * **Event:** Monday, 12 October 2026, 10:30 AM IST — Alka Motel, Pallav Vihar, Bulandshahr, Uttar Pradesh
-* **Meetup:** Our House, 8:30 AM IST
 
 > Nothing has been deployed by this project. You create the repository and switch on the free
 > hosting feature yourself (steps below). Free hosting is subject to GitHub's / GitLab's current terms.
@@ -134,13 +133,13 @@ and Facebook's "Sharing Debugger" can re-scrape a URL.
 
 | What | Where |
 | --- | --- |
-| Colours | Variables at the top of `css/styles.css` (`--color-maroon`, `--color-gold`, …) |
+| Colours | Variables at the top of `css/styles.css` (`--color-royal`, `--color-gold`, …) |
 | Fonts | `<link>` in `index.html` and `--font-serif` / `--font-sans` in `css/styles.css` |
 | Wording | Visible text in `index.html` |
-| Date, time, venue, meetup, names, signature (for JS features) | `js/config.js` — **and** the matching text in `index.html` (hero, details, meetup, countdown note, `<title>`, meta tags, JSON-LD) |
+| Date, time, venue, names, signature (for JS features) | `js/config.js` — **and** the matching text in `index.html` (hero, details, countdown note, `<title>`, meta tags, JSON-LD) |
 | Countdown target | `event.start` in `js/config.js` (ISO time with the `+05:30` India offset) |
 | Directions button | Built from the venue name + address in `js/config.js`; the fallback link is also in `index.html` (`id="directions-link"`). To use a Google Maps "Share" link instead, paste it into that `href` and remove `data-directions` from the tag |
-| Signature line | `index.html` (`.closing__signoff`) and `hosts` in `js/config.js`. It currently reads "Ex-Sub Sukrampal Singh & Family"; change both places if you prefer "Khushbu & Gagan & Family" |
+| Signature line | `index.html` (`.closing__signoff`) and `hosts` in `js/config.js` |
 | Music | Save a track you are allowed to use as `assets/music.mp3`, then set `music: Object.freeze({ enabled: true })` in `js/config.js` (see `assets/README.txt`). It is off by default, so a missing file never causes errors |
 | Preview image | `assets/og-image.png` (1200 × 630) |
 
@@ -150,7 +149,7 @@ Do this on the deployed link, not just locally.
 
 - [ ] Opens over HTTPS in Safari (iPhone) and Chrome (Android); the opening screen fits without scrolling.
 - [ ] "SHREE GANESHAY NAMAH" appears, then the title, then **Open Invitation**; tapping it opens the invitation smoothly.
-- [ ] Gagan & Khushbu are large and readable without zooming; no sideways scrolling anywhere (try 320 px width and landscape).
+- [ ] Khushbu & Gagan are large and readable without zooming; no sideways scrolling anywhere (try 320 px width and landscape).
 - [ ] **Get Directions** opens Google Maps with a search for Alka Motel, Pallav Vihar, Bulandshahr.
 - [ ] **Add to Calendar** downloads an `.ics` file that opens in the calendar app with the right date/time (10:30 AM IST).
 - [ ] The countdown ticks every second and shows the right remaining time.
@@ -166,9 +165,8 @@ Do this on the deployed link, not just locally.
 **Implemented**
 
 - [x] Opening screen with floating gold particles, blessing, title and "Open Invitation" button (no sound)
-- [x] Hero with Gagan & Khushbu, mask-reveal names, self-drawing line-art arch
+- [x] Hero with Khushbu & Gagan, mask-reveal names, self-drawing line-art arch
 - [x] Event details with calendar and location icons, Google Maps search link for the exact venue
-- [x] Meetup section (Our House, 8:30 AM IST; no invented address)
 - [x] Live countdown to 12 Oct 2026, 10:30 AM IST, no negatives, graceful post-event message, timers cleaned up
 - [x] Closing messages, signature and floral flourish
 - [x] Scroll reveals, progress bar, light parallax, reduced-motion support, text visible without JS

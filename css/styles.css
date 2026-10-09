@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Gagan & Khushbu — Engagement Invitation
+   Khushbu & Gagan — Engagement Invitation
    Mobile-first, no frameworks. Colours and fonts are CSS custom properties (see :root).
    ========================================================================== */
 
@@ -12,17 +12,17 @@
 
 :root {
   /* Palette */
-  --color-background: #FAF7F2;
-  --color-background-alt: #F4EEE5;
-  --color-surface: #FFFFFF;
-  --color-maroon: #642D3B;
-  --color-maroon-dark: #3D2029;
-  --color-gold: #B89A63;
-  --color-gold-deep: #8A6D3B;     /* darker gold: readable small text / icons on ivory (4.6:1) */
-  --color-gold-light: #DCC594;    /* readable gold on the dark maroon section */
-  --color-text: #292526;
-  --color-muted: #756C6B;
-  --color-line: rgba(184, 154, 99, 0.45);
+  --color-background: #F8F3E8;
+  --color-background-alt: #EEE5D4;
+  --color-surface: #FFFCF5;
+  --color-royal: #2D183D;
+  --color-royal-dark: #170F25;
+  --color-gold: #C9A75C;
+  --color-gold-deep: #80611F;
+  --color-gold-light: #E6D39B;
+  --color-text: #241D29;
+  --color-muted: #706779;
+  --color-line: rgba(128, 97, 31, 0.32);
 
   /* Typography */
   --font-serif: 'Cormorant Garamond', 'Cormorant Fallback', Georgia, 'Times New Roman', serif;
@@ -37,7 +37,7 @@
   --safe-bottom: env(safe-area-inset-bottom, 0px);
   --section-space: clamp(4.5rem, 14vw, 7.5rem);
 
-  --shadow-soft: 0 18px 40px -22px rgba(61, 32, 41, 0.35);
+  --shadow-soft: 0 18px 40px -22px rgba(23, 15, 37, 0.38);
 }
 
 /* ---------- Reset / base ---------- */
@@ -102,7 +102,7 @@ img, svg { max-width: 100%; }
   top: 0.75rem; left: 0.75rem;
   z-index: 200;
   padding: 0.7rem 1.1rem;
-  background: var(--color-maroon);
+  background: var(--color-royal);
   color: var(--color-background);
   border-radius: 8px;
   font-size: 0.9rem;
@@ -137,7 +137,7 @@ html:not(.js) [data-needs-js] { display: none !important; }
 .progress__bar {
   display: block;
   height: 100%;
-  background: linear-gradient(90deg, var(--color-gold), #DCC594);
+  background: linear-gradient(90deg, var(--color-gold), var(--color-gold-light));
   transform: scaleX(0);
   transform-origin: left center;
   will-change: transform;
@@ -163,7 +163,7 @@ html:not(.js) [data-needs-js] { display: none !important; }
   font-weight: 500;
   font-size: clamp(2.1rem, 8vw, 3.2rem);
   line-height: 1.12;
-  color: var(--color-maroon);
+  color: var(--color-royal);
   letter-spacing: 0.01em;
 }
 .section-title--light { color: var(--color-background); }
@@ -185,7 +185,7 @@ html:not(.js) [data-needs-js] { display: none !important; }
   background: var(--color-background);
   border: 1px solid var(--color-gold);
 }
-.rule--light::after { background: var(--color-maroon-dark); }
+.rule--light::after { background: var(--color-royal-dark); }
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -195,9 +195,9 @@ html:not(.js) [data-needs-js] { display: none !important; }
   gap: 0.65rem;
   min-height: 48px;
   padding: 0.85rem 1.7rem;
-  border: 1px solid var(--color-maroon);
+  border: 1px solid var(--color-royal);
   border-radius: 999px;
-  background: var(--color-maroon);
+  background: var(--color-royal);
   color: var(--color-background);
   font-family: var(--font-sans);
   font-size: 0.78rem;
@@ -212,8 +212,8 @@ html:not(.js) [data-needs-js] { display: none !important; }
               box-shadow 0.3s var(--ease), transform 0.3s var(--ease), border-color 0.3s var(--ease);
 }
 .btn:hover {
-  background: var(--color-maroon-dark);
-  border-color: var(--color-maroon-dark);
+  background: var(--color-royal-dark);
+  border-color: var(--color-royal-dark);
   box-shadow: 0 12px 26px -14px rgba(61, 32, 41, 0.7);
   transform: translateY(-1px);
 }
@@ -222,11 +222,11 @@ html:not(.js) [data-needs-js] { display: none !important; }
 
 .btn--ghost {
   background: transparent;
-  color: var(--color-maroon);
+  color: var(--color-royal);
 }
 .btn--ghost:hover {
   background: rgba(100, 45, 59, 0.07);
-  color: var(--color-maroon-dark);
+  color: var(--color-royal-dark);
   box-shadow: none;
 }
 
@@ -250,7 +250,7 @@ html.js .gate {
   display: grid;
   place-items: center;
   padding: max(1.5rem, var(--safe-top)) var(--gutter) max(1.5rem, var(--safe-bottom));
-  background: radial-gradient(ellipse at 50% 28%, #FFFDF9 0%, #FAF7F2 52%, #F0E8DB 100%);
+  background: radial-gradient(ellipse at 50% 28%, #FFFCF5 0%, #F8F3E8 52%, #E9DFC9 100%);
   overflow: hidden;
   transition: opacity 0.8s var(--ease), visibility 0.8s;
 }
@@ -298,7 +298,7 @@ html.js .gate {
   font-weight: 600;
   font-size: clamp(0.95rem, 4.2vw, 1.2rem);
   letter-spacing: 0.22em;
-  color: var(--color-maroon);
+  color: var(--color-royal);
   animation: fade 1.6s var(--ease) 0.3s both;
 }
 
@@ -313,7 +313,7 @@ html.js .gate {
   font-weight: 500;
   font-size: clamp(2rem, 9.5vw, 3.4rem);
   line-height: 1.12;
-  color: var(--color-maroon-dark);
+  color: var(--color-royal-dark);
   animation: fade-up 1.2s var(--ease) 1.3s both;
 }
 
@@ -361,7 +361,7 @@ html.js .gate {
   font-size: clamp(3rem, 14.5vw, 6.6rem);
   line-height: 1;
   letter-spacing: 0.005em;
-  color: var(--color-maroon);
+  color: var(--color-royal);
 }
 .name {
   display: block;
@@ -462,61 +462,13 @@ html.js .gate {
   line-height: 1.25;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-maroon);
+  color: var(--color-royal);
 }
 .detail__big--name { text-transform: none; letter-spacing: 0.02em; font-size: clamp(1.9rem, 8vw, 2.5rem); font-weight: 500; }
 .detail__sub {
   margin-top: 0.5rem;
   font-size: 1.02rem;
   color: var(--color-text);
-}
-
-/* ==========================================================================
-   D. Meetup
-   ========================================================================== */
-.meetup {
-  background:
-    radial-gradient(ellipse 70% 60% at 50% 0%, rgba(184, 154, 99, 0.16), transparent 70%),
-    var(--color-maroon-dark);
-  color: var(--color-background);
-}
-.meetup :focus-visible { outline-color: var(--color-gold-light); }
-
-.meetup__clock {
-  display: inline-grid;
-  place-items: center;
-  width: 4.6rem; height: 4.6rem;
-  margin-top: 0.4rem;
-  color: var(--color-gold-light);
-  border: 1px solid rgba(220, 197, 148, 0.5);
-  border-radius: 50%;
-}
-
-.meetup__list {
-  display: grid;
-  gap: 1.8rem;
-  width: min(100%, 28rem);
-  margin: 2.2rem auto 0;
-}
-.meetup__item dt {
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--color-gold-light);
-  padding-left: 0.3em;
-}
-.meetup__item dd {
-  margin-top: 0.4rem;
-  font-family: var(--font-serif);
-  font-weight: 500;
-  font-size: clamp(1.9rem, 8vw, 2.6rem);
-  line-height: 1.15;
-}
-.meetup__tz { font-size: 0.55em; letter-spacing: 0.18em; color: var(--color-gold-light); }
-.meetup__item + .meetup__item {
-  padding-top: 1.8rem;
-  border-top: 1px solid rgba(220, 197, 148, 0.35);
 }
 
 /* ==========================================================================
@@ -543,7 +495,7 @@ html.js .gate {
   font-weight: 500;
   font-size: clamp(2.2rem, 11.5vw, 4.4rem);
   line-height: 1.05;
-  color: var(--color-maroon);
+  color: var(--color-royal);
   font-variant-numeric: lining-nums tabular-nums;
 }
 .count__label {
@@ -564,7 +516,7 @@ html.js .gate {
   font-weight: 500;
   font-size: clamp(1.6rem, 6vw, 2.3rem);
   line-height: 1.25;
-  color: var(--color-maroon);
+  color: var(--color-royal);
 }
 
 .countdown__note {
@@ -605,7 +557,7 @@ html.js .gate {
   font-weight: 500;
   font-size: clamp(1.8rem, 6.8vw, 2.7rem);
   line-height: 1.25;
-  color: var(--color-maroon);
+  color: var(--color-royal);
 }
 .closing__text {
   margin-top: 1.6rem;
@@ -622,7 +574,7 @@ html.js .gate {
   font-family: var(--font-serif);
   font-weight: 600;
   font-size: clamp(1.4rem, 5.4vw, 1.75rem);
-  color: var(--color-maroon);
+  color: var(--color-royal);
 }
 
 .flourish {
@@ -644,7 +596,7 @@ html.js .gate {
   font-style: italic;
   font-weight: 500;
   font-size: 1.6rem;
-  color: var(--color-maroon);
+  color: var(--color-royal);
 }
 .share .actions { margin-top: 1.4rem; }
 
@@ -676,7 +628,7 @@ html.js .gate {
   background: rgba(255, 255, 255, 0.92);
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
-  color: var(--color-maroon);
+  color: var(--color-royal);
   font-family: var(--font-sans);
   font-size: 0.72rem;
   font-weight: 500;
@@ -688,7 +640,7 @@ html.js .gate {
   transition: background-color 0.3s var(--ease), color 0.3s var(--ease), transform 0.3s var(--ease);
 }
 .music:hover { transform: translateY(-1px); }
-.music[data-state='playing'] { background: var(--color-maroon); color: var(--color-background); border-color: var(--color-maroon); }
+.music[data-state='playing'] { background: var(--color-royal); color: var(--color-background); border-color: var(--color-royal); }
 
 .toast {
   position: fixed;
@@ -699,7 +651,7 @@ html.js .gate {
   max-width: min(90vw, 26rem);
   padding: 0.8rem 1.2rem;
   border-radius: 14px;
-  background: var(--color-maroon-dark);
+  background: var(--color-royal-dark);
   color: var(--color-background);
   font-size: 0.9rem;
   line-height: 1.45;
@@ -765,16 +717,6 @@ html.js.is-open .hero__frame .twinkle { animation: fade-in-soft 1.4s var(--ease)
 /* ==========================================================================
    Larger screens
    ========================================================================== */
-@media (min-width: 560px) {
-  .meetup__list { grid-template-columns: 1fr 1fr; gap: 0; width: min(100%, 36rem); }
-  .meetup__item { padding: 0 1.5rem; }
-  .meetup__item + .meetup__item {
-    padding-top: 0;
-    border-top: 0;
-    border-left: 1px solid rgba(220, 197, 148, 0.35);
-  }
-}
-
 @media (min-width: 720px) {
   .container { width: min(100%, 52rem); }
   .container--narrow { width: min(100%, 40rem); }

@@ -3,7 +3,7 @@
 // update BOTH this file and index.html (see README.md → "Customize").
 
 export const INVITE = Object.freeze({
-  couple: Object.freeze({ groom: 'Gagan', bride: 'Khushbu' }),
+  couple: Object.freeze({ bride: 'Khushbu', groom: 'Gagan' }),
 
   // Optional. Leave empty to use the address the page is opened from (recommended).
   // Set it (for example 'https://username.github.io/engagement-invitation/') only if you want
@@ -11,7 +11,7 @@ export const INVITE = Object.freeze({
   siteUrl: '',
 
   event: Object.freeze({
-    title: 'Engagement of Gagan & Khushbu',
+    title: 'Engagement of Khushbu & Gagan',
     // ISO 8601 with an explicit +05:30 offset = India Standard Time. Do not remove the offset.
     start: '2026-10-12T10:30:00+05:30',
     durationMinutes: 180,
@@ -21,12 +21,7 @@ export const INVITE = Object.freeze({
     venueAddress: 'Pallav Vihar, Bulandshahr, Uttar Pradesh, India',
   }),
 
-  meetup: Object.freeze({
-    point: 'Our House',
-    timeLabel: '8:30 AM IST',
-  }),
-
-  hosts: 'Ex-Sub Sukrampal Singh & Family',
+  hosts: 'Sanjeev Kumar & Family',
 
   // Background music. Keep false until you have added assets/music.mp3 (see README.md → Customize).
   // When false, no music button is shown and no audio request is ever made.

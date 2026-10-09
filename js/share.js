@@ -12,7 +12,7 @@ export function getInviteUrl() {
 }
 
 function shareHeadline() {
-  return `You're invited to the engagement of ${INVITE.couple.groom} & ${INVITE.couple.bride}!`;
+  return `You're invited to the engagement of ${INVITE.couple.bride} & ${INVITE.couple.groom}!`;
 }
 
 /** WhatsApp-friendly invitation message. */
@@ -32,16 +32,13 @@ export function shareMessage({ includeUrl = true } = {}) {
 
 export function eventDetailsText() {
   const e = INVITE.event;
-  const m = INVITE.meetup;
   return [
-    `Engagement of ${INVITE.couple.groom} & ${INVITE.couple.bride}`,
+    `Engagement of ${INVITE.couple.bride} & ${INVITE.couple.groom}`,
     '',
     `Date: ${e.dateLabel}`,
     `Time: ${e.timeLabel}`,
     `Venue: ${e.venueName}, ${e.venueAddress}`,
     `Directions: ${directionsUrl()}`,
-    '',
-    `Meetup: ${m.point} at ${m.timeLabel}`,
     '',
     `Invitation: ${getInviteUrl()}`,
     '',
@@ -82,7 +79,7 @@ async function handleShare() {
   if (typeof navigator.share === 'function') {
     try {
       await navigator.share({
-        title: `${INVITE.couple.groom} & ${INVITE.couple.bride} — Engagement Invitation`,
+        title: `${INVITE.couple.bride} & ${INVITE.couple.groom} — Engagement Invitation`,
         text: shareMessage({ includeUrl: false }),
         url,
       });
@@ -131,12 +128,10 @@ function foldLine(line) {
 
 export function buildIcs() {
   const e = INVITE.event;
-  const m = INVITE.meetup;
   const start = eventStartMs();
   const end = start + e.durationMinutes * 60000;
   const description = [
-    `Together with our families, we joyfully invite you to celebrate the engagement of ${INVITE.couple.groom} and ${INVITE.couple.bride}.`,
-    `Meetup: ${m.point} at ${m.timeLabel}.`,
+    `Together with our families, we joyfully invite you to celebrate the engagement of ${INVITE.couple.bride} and ${INVITE.couple.groom}.`,
     `Directions: ${directionsUrl()}`,
     `Invitation: ${getInviteUrl()}`,
   ].join('\n');
@@ -167,7 +162,7 @@ function handleAddToCalendar() {
     const href = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = href;
-    link.download = 'gagan-khushbu-engagement.ics';
+    link.download = 'khushbu-gagan-engagement.ics';
     document.body.appendChild(link);
     link.click();
     link.remove();
